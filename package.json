@@ -1,0 +1,49 @@
+{
+  "name": "windows-cursor-icon",
+  "version": "1.0.0",
+  "description": "Get the Windows cursor icon in different image formats.",
+  "main": "dist/windows-cursor-icon.js",
+  "types": "dist/windows-cursor-icon.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "os": [
+    "win32"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "preversion": "npm run build && git add . && (git commit -m \"Update build files\" || git status)",
+    "prepare": "npm run build",
+    "preview-package-contents": "npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felladrin/windows-cursor-icon.git"
+  },
+  "keywords": [
+    "windows",
+    "winapi",
+    "cursor",
+    "icon",
+    "mouse",
+    "image"
+  ],
+  "author": {
+    "name": "Victor Nogueira",
+    "email": "victor@victornogueira.app",
+    "url": "https://victornogueira.app"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felladrin/windows-cursor-icon/issues"
+  },
+  "homepage": "https://github.com/felladrin/windows-cursor-icon#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.34",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "edge-js": "^15.5.2"
+  }
+}
